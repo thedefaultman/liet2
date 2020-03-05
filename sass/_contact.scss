@@ -1,0 +1,87 @@
+
+.contact {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    background: $color-secondary;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:[full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: min-content min-content min-content;
+
+    align-items: center;
+    justify-items: center;
+
+    &__info {
+        grid-column: center-start / center-end;
+        display: grid;
+        grid-column-gap: 10rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 10rem;
+    }
+    
+}
+
+.contact-2 {
+    color: #fff;
+    grid-column: 5 / 7;
+    grid-row: 1 / 1;
+    margin: 5rem 0;
+    text-transform: uppercase;
+    padding-top: 5rem;
+
+}
+
+.contact-3 {
+    grid-column: 4 / 8;
+    grid-row: 2 / 2;
+    margin: 5rem 0;
+}
+.first-contact, .second-contact, .third-contact, .forth-contact {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.svg-loc {
+    svg {
+        fill: #fff;
+        height: 15rem;
+        width: 15rem;
+    }
+} 
+.h4 {
+    color: $color-grey;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background: #fff;
+}
+
+.btn-contact {
+    margin-top: 2rem;
+    background: #fff;
+    color: #8C8B88;
+    border: none;
+    border-radius: 0;
+    font-family: $font-display;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: hover .2s;
+
+    &:hover {
+        background-color: $color-contact;
+    }
+}
+
+.a-contact {
+    color: #8C8B88;
+    text-decoration-line: none
+}

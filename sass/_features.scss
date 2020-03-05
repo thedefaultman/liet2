@@ -1,0 +1,44 @@
+
+
+
+.fix-grid {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+}
+
+
+
+
+
+.features {
+    grid-column: center-start / center-end;
+    margin: 10rem 0 0 0;
+
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    align-items: start;
+    height: 100vh;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem; 
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
+}

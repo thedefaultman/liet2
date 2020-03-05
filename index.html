@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.4.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+    <script src="./barba.min.js" type="text/javascript"></script>
+
+    
+    
+
+
+
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+    <title>Liet Coding</title>
+</head>
+<body class="container" data-barba="wrapper">
+
+
+    <section class="header example-classname" data-section-name="header">
+        <div class="top-bar">
+            <div class="logo">
+                <img src="./img/logo-white.png" class="logo-img">
+            </div>
+            <div class="watch">
+                <p class="watch-style">WATCH HOW &gt;</p> 
+            </div>
+        </div>
+        <div class="hero-image"></div>
+        <div class="rellax parallax-el" data-rellax-speed="5"></div>
+        <div class="rellax text" data-rellax-speed="10"></div>
+        <div class="rellax clouds" data-rellax-speed="8"></div>
+        <div class="whitespace"></div>
+        
+        <div class="right-sidebar">
+            <p class="nav">
+                <a class="up" href="index.html">&#9679;</a> <a class="down" href="projects.html">&#9679;</a> <a class="down" href="contact.html">&#9679;</a> 
+            </p>
+
+      </div>
+    </section>
+
+<div class="screen-wipe-left"></div>
+<div class="screen-wipe-right"></div>
+<!-- <div class="screen-wipe-right"></div> -->
+
+        <section  class="features example-classname" data-barba="container" data-barba-namespace="home" data-section-name="features">
+        <h1 class="head1">Features</h1>
+        <div class="feature">
+            <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-html5"></use>
+            </svg>
+            <h4 class="heading-4 heading-4--dark">HTML Master</h4>
+            <p class="feature__text">Lorem ipsum dols, recusandae quae nesciunt aliquid porro consequatur </p>
+        </div>
+        <div class="feature">
+            <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-css3"></use>
+            </svg>
+            <h4 class="heading-4 heading-4--dark">Pure CSS</h4>
+            <p class="feature__text">Lorem ipsum dols, recusandae quae nesciunt aliquid porro consequatur </p>
+        </div>
+        <div class="feature">
+            <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-javascript"></use>
+            </svg>
+            <h4 class="heading-4 heading-4--dark">Web Applications with JS</h4>
+            <p class="feature__text">Lorem ipsum dols, recusandae quae nesciunt aliquid porro consequatur </p>
+        </div>
+        <div class="feature">
+            <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-node-dot-js"></use>
+            </svg>
+            <h4 class="heading-4 heading-4--dark">Back-end Development</h4>
+            <p class="feature__text">Lorem ipsum dols, recusandae quae nesciunt aliquid porro consequatur </p>
+        </div>
+        <div class="feature">
+            <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-visualstudiocode"></use>
+            </svg>
+            <h4 class="heading-4 heading-4--dark">Resposive Design</h4>
+            <p class="feature__text">Lorem ipsum dols, recusandae quae nesciunt aliquid porro consequatur </p>
+        </div>
+        <div class="feature">
+            <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-googlechrome"></use>
+            </svg>
+            <h4 class="heading-4 heading-4--dark">UI/UX Design</h4>
+            <p class="feature__text">Lorem ipsum dols, recusandae quae nesciunt aliquid porro consequatur </p>
+        </div>
+</section>
+
+        <script src="rellax.min.js"></script>
+        <script type="text/javascript">
+              var rellax = new Rellax('.rellax');
+        </script>
+
+ <script type="text/javascript">
+
+      TweenMax.from(".logo", 1, {
+            delay: 1,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".watch", 1, {
+            delay: 1.4,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+      });
+
+ </script>   
+
+<script>
+        $(function() {
+          $.scrollify({
+            section : ".example-classname",
+            sectionName : "section-name",
+            easing: "easeOutExpo",
+            scrollSpeed: 5300,
+            touchScroll:true,
+            scrollbars: false,
+            // before:function(features) {
+            //     TweenMax.to('.nav', 1, {opacity: 0})
+            // },
+            after:function() {
+                TweenMax.to('.nav', 1, {opacity: 1})
+            },
+          });
+
+        });
+      </script>
+
+
+
+<script>
+    $('document').ready(function() {
+        // barba.hooks.leave((data) => {
+        // // this hook will be called for each transitions
+        // });
+
+        barba.init({
+            transitions: [{
+                name: 'feature-project',
+                leave(data) {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-left", 1, {x: "100%", onComplete: resolve, ease: Power2.easeOut});
+                    });
+                },
+                enter: ({ next })=> {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-left", 1, {x: "0%", onStart: resolve});
+                    });
+                },
+                afterEnter(data) {
+                    return new Promise(resolve => {
+                                TweenMax.from(".project__img--1", .7, { opacity: 0, x: -130, delay: 1, ease: Back.easeOut.config(1.7) });
+                                TweenMax.from(".project__img--2", .8, { opacity: 0, x: -120, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".heading-3", 1.2, { opacity: 0, x: 110, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".project__text", 1.5, { opacity: 0, x: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".btn", .9, { opacity: 0, x: 170, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".heading-2", .8, { opacity: 0, x: 140, onStart: resolve, ease: Expo.easeInOut });
+
+                                
+                        });
+                    },
+
+                from: {
+                    namespace: 'home'
+                },
+                to: {
+                    namespace: 'project'
+                }
+            },
+            {
+                name: 'project-feature',
+                beforeLeave(data) {
+                    return new Promise(resolve => {
+                        TweenMax.to(".project__img--1", .7, { opacity: 0, x: -130, delay: 1, ease: Back.easeOut.config(1.7) });
+                                TweenMax.to(".project__img--2", .8, { opacity: 0, x: -120, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".heading-3", 1.2, { opacity: 0, x: 110, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".heading-2", .8, { opacity: 0, x: 140, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".btn", 1, { opacity: 0, x: 170, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".project__text", 1.5, { opacity: 0, x: 150, onComplete: resolve, ease: Expo.easeInOut });
+
+                            });
+                },
+                leave(data) {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-right", 1, {left: "0%", onComplete: resolve, ease: Power2.easeOut});
+                    });
+                },
+                enter: ({ next })=> {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-right", 1, {left: "100%", onStart: resolve});
+                    });
+                },
+                
+                from: {
+                    namespace: 'project'
+                },
+                to: {
+                    namespace: 'home'
+                }
+            },
+
+            {
+                name: 'project-contact',
+                beforeLeave(data) {
+                    return new Promise(resolve => {
+                        TweenMax.to(".project__img--1", .7, { opacity: 0, x: -130, delay: 1, ease: Back.easeOut.config(1.7) });
+                                TweenMax.to(".project__img--2", .8, { opacity: 0, x: -120, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".heading-3", 1.2, { opacity: 0, x: 110, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".heading-2", .8, { opacity: 0, x: 140, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".btn", 1, { opacity: 0, x: 170, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".project__text", 1.5, { opacity: 0, x: 150, onComplete: resolve, ease: Expo.easeInOut });
+
+                            });
+                },
+                leave(data) {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-right", 1, {left: "0%", onComplete: resolve});
+                    });
+                },
+                enter: ({ next })=> {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-right", 1, {left: "100%", onStart: resolve});
+                    });
+                },
+                afterEnter(data) {
+                    return new Promise(resolve => {
+                                TweenMax.from(".contact-2", .7, { opacity: 0, y: -130, delay: 1, ease: Back.easeOut.config(1.7) });
+                                TweenMax.from(".first-contact", .8, { opacity: 0, y: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".second-contact", 1, { opacity: 0, y: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".third-contact", 1.2, { opacity: 0, y: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".forth-contact", 1.4, { opacity: 0, y: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.from(".contact-3", 1, { opacity: 0, y: -120, onStart: resolve, ease: Expo.easeInOut });
+                                
+                        });
+                    },
+                
+                from: {
+                    namespace: 'project'
+                },
+                to: {
+                    namespace: 'contact'
+                }
+            },
+
+            {
+                name: 'contact-project',
+                beforeLeave(data) {
+                    return new Promise(resolve => {
+                        TweenMax.to(".contact-2", .7, { opacity: 0, y: -130, delay: 1, ease: Back.easeOut.config(1.7) });
+                        TweenMax.to(".contact-3", 1, { opacity: 0, y: -120, ease: Expo.easeInOut });
+                                TweenMax.to(".first-contact", .8, { opacity: 0, y: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".second-contact", 1, { opacity: 0, y: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".third-contact", 1.2, { opacity: 0, y: 150, delay: 1, ease: Expo.easeInOut });
+                                TweenMax.to(".forth-contact", 1.4, { opacity: 0, y: 150, delay: 1, onComplete: resolve, ease: Expo.easeInOut });
+                                
+                                
+                            });
+                },
+                leave(data) {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-right", 1, {left: "0%", onComplete: resolve});
+                    });
+                },
+                enter: ({ next })=> {
+                    return new Promise(resolve => {
+                        var tl = new TimelineMax();
+                        tl.
+                        to(".screen-wipe-right", 1, {left: "100%", onStart: resolve});
+                    });
+                },
+                afterEnter(data) {
+                    return new Promise(resolve => {
+                        TweenMax.from(".project__img--1", .7, { opacity: 0, x: -130, delay: 1, onStart: resolve, ease: Back.easeOut.config(1.7) });
+                                TweenMax.from(".project__img--2", .8, { opacity: 0, x: -120, delay: 1, onStart: resolve, ease: Expo.easeInOut });
+                                TweenMax.from(".heading-3", 1.2, { opacity: 0, x: 110, delay: 1, onStart: resolve, ease: Expo.easeInOut });
+                                TweenMax.from(".project__text", 1.5, { opacity: 0, x: 150, delay: 1, onStart: resolve, ease: Expo.easeInOut });
+                                TweenMax.from(".btn", .9, { opacity: 0, x: 170, delay: 1, onStart: resolve, ease: Expo.easeInOut });
+                                TweenMax.from(".heading-2", .8, { opacity: 0, x: 140, onStart: resolve, ease: Expo.easeInOut });
+
+                        });
+                    },
+                
+                from: {
+                    namespace: 'contact'
+                },
+                to: {
+                    namespace: 'project'
+                }
+            }
+        ]
+        }
+        );
+
+    });
+</script>
+
+</body>
+</html>

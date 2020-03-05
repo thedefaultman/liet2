@@ -1,0 +1,144 @@
+.header {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr) 20rem;
+    grid-template-rows: 8rem minmax(30rem, 1fr);
+    
+}
+.right-sidebar {
+    z-index: 1000000;
+    grid-column: 2 / -1;
+    align-self: center;
+    font-family: $font-display;
+    font-weight: 400;
+    grid-column-gap: 2rem;
+    position: fixed;
+}
+
+.bar {
+    list-style: none;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+
+.top-bar {
+    display: grid;
+    grid-template-columns: minmax(17rem, min-content) 1fr minmax(30rem, min-content);
+    grid-row: 1 / 1;
+    grid-column: 1 / -1;
+    z-index: 100000;
+}
+
+.logo {
+    background-color: $color-secondary;
+    // padding-top: 2rem;
+    // padding-left: 2rem;
+    // padding-right: 2rem;
+}
+
+.logo-img {
+    height: 4rem;
+    position: relative;
+    top: 20%;
+    left: 20%;
+}
+
+.watch {
+    grid-column: 3 / -1;
+}
+
+.watch-style {
+    text-align: start;
+    color: $color-secondary;
+    font-size: 2rem;
+    font-family: $font-display;
+    position: relative;
+    top: 25%;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.inside {
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.nav {
+    color: $color-grey;
+    font-size: 2rem;
+    font-weight: 500;
+    transform: rotate(90deg);
+    cursor: pointer;
+   margin-left: 2rem;
+   opacity: 0;
+}
+
+.up, .down {
+    text-decoration: none;
+   
+    color: $color-grey;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url(../img/hero3.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.parallax-el {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/upper3.png) no-repeat 50% 40%;
+    background-size: cover;
+    top: 20%;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 32%;
+    background: url(../img/text1.png) no-repeat 50% 50%;
+    background-size: cover;
+    mix-blend-mode: overlay;
+}
+
+
+.clouds {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/clouds.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.whitespace {
+    width: 100%;
+    height: 100vh;
+}
+
+.content {
+    width: 80%;
+    margin: 5rem auto;
+    padding: 8rem 0;
+    font-family: Helvetica;
+}
+
+h1 {
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+p {
+    line-height: 4rem;
+    text-align: justify;
+}
